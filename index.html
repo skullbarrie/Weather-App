@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <title>Final Weather App</title>
+
+  </head>
+
+  <body>
+     <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+           <form class="row g-3" id="search-form">
+            <div class="col-7">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Enter a city"
+                id="type-city"
+                autofocus="on"
+                autocomplete="off"
+              />
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                value="Search"
+                class="btn btn-primary mb-3"
+              />
+            </div>
+            <div class="col-2">
+              <button
+                type="submit"
+                class="btn btn-success mb-3"
+                id="current-button"
+              >
+                <i class="fa-solid fa-location-dot"></i>
+              </button>
+            </div>
+          </form>
+   <div class="today-body">
+            <h1 id="city"></h1>
+            <h2></h2>
+            <h3 id="description"></h3>
+
+            <div class="row">
+              <div class="col-8 today-weather">
+                <span>
+                  <img
+                    src="img/01d.svg"
+                    id="icon"
+                    alt="clear sky"
+                    width="150"
+                    class="weather-icon"
+                  />
+                </span>
+                <strong class="temperature" id="temperature"></strong>
+                <span
+                  class="btn-group"
+                  role="group"
+                  aria-label="Basic radio toggle button group"
+                >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio1"
+                    autocomplete="off"
+                    checked
+                  />
+                  <label class="btn btn-outline-primary btn-sm" for="btnradio1"
+                    >°C</label
+                  >
+                  <input
+                    type="radio"
+                    class="btn-check"
+                    name="btnradio"
+                    id="btnradio2"
+                    autocomplete="off"
+                  />
+                  <label class="btn btn-outline-primary btn-sm" for="btnradio2"
+                    >°F</label
+                  >
+                </span>
+              </div>
+              <div class="col-3 today-weather-details">
+                Humidity: <span id="humidity"></span>%<br />
+                Wind: <span id="wind"></span> km/h
+              </div>
+            </div>
+          </div>
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
+        <div class="footer">
+          <a
+            href="https://github.com/skullbarrie/Weather-App"
+            target="blank"
+          >
+            Open-source code
+          </a>
+         
+        </small>
+           by Meghan Roberts
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
